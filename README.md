@@ -24,3 +24,6 @@
 
     The site is now running at `http://localhost:3000`!
 
+
+## ⚡️ Live
+[Check it live](https://td-chop-test.netlify.app/)
