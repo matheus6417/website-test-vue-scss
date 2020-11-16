@@ -1,0 +1,120 @@
+$grid-gutter-width:   $gutter;
+$grid-columns:        12;
+
+$breakpoints:         'xxs','xs','sm','md','lg';
+$screen-xs:           375px;
+$screen-sm:           768px;
+$screen-md:           992px;
+$screen-lg:           1140px;
+$screen-xlg:          1900px;
+
+$container-xs:        460px;
+$container-sm:        768px;
+$container-md:        1220px;
+$container-lg:        1440px;
+
+$screens: "xxs" false,
+          "xs" $screen-xs,
+          "sm" $screen-sm,
+          "md" $screen-md,
+          "lg" $screen-lg;
+
+$grid-breakpoint:     $screen-md;
+
+@mixin container-fixed($gutter: $grid-gutter-width) {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:  $gutter;
+  padding-right: $gutter;
+}
+
+
+.container {
+  @include container-fixed;
+  max-width: 100%;
+
+  @media (min-width: $screen-xs) {
+    max-width: $container-sm;
+  }
+  @media (min-width: $screen-sm) {
+    max-width: $container-md;
+  }
+  @media (min-width: $screen-md) {
+    max-width: $container-lg;
+  }
+  @media (min-width: $screen-lg) {
+    max-width: $container-lg;
+  }
+}
+
+.container-xs {
+  @include container-fixed;
+  max-width: $container-xs;
+}
+.container-sm {
+  @include container-fixed;
+  max-width: $container-sm;
+}
+.container-md {
+  @include container-fixed;
+  max-width: $container-md;
+}
+.container-lg {
+  @include container-fixed;
+  max-width: $container-lg;
+}
+
+.container-fluid {
+  @include container-fixed;
+}
+
+
+.clear{
+  clear: both;
+}
+
+@media (max-width: $screen-xs - 1){
+  .is-hidden-xxs{
+    display: none !important;
+  }
+  [class*=is-visible]:not(.is-visible-xxs){
+    display: none !important;
+  }
+}
+
+@media (min-width: $screen-xs) and (max-width: $screen-sm - 1){
+  .is-hidden-xs{
+    display: none !important;
+  }
+  [class*=is-visible]:not(.is-visible-xs){
+    display: none !important;
+  }
+}
+
+@media (min-width: $screen-sm) and (max-width: $screen-md - 1){
+  .is-hidden-sm{
+    display: none !important;
+  }
+  [class*=is-visible]:not(.is-visible-sm){
+    display: none !important;
+  }
+}
+
+@media (min-width: $screen-md) and (max-width: $screen-lg - 1){
+  .is-hidden-md{
+    display: none !important;
+  }
+  [class*=is-visible]:not(.is-visible-md){
+    display: none !important;
+  }
+}
+
+@media (min-width: $screen-lg) {
+  .is-hidden-lg{
+    display: none !important;
+  }
+  [class*=is-visible]:not(.is-visible-lg){
+    display: none !important;
+  }
+}
