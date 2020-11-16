@@ -24,7 +24,7 @@
           class="post"
           :class="`posts--${item.category}`"
           ><div class="post__image cover_image">
-            <asset :image-url="item.imgUrl" :alt="item.imgUrl" />
+            <asset :imageURL="item.image" :alt="item.image" />
           </div>
           <div class="post__text">
             <span class="post__category">{{ item.category }}</span>
@@ -52,21 +52,21 @@ export default {
       filteredByCategory: 'All',
       blogitems:[
         {
-          imgUrl:'blog/image-02.jpg', 
+          image:'blog/image-02.jpg', 
           category: 'insights',
           title:'Aliquam convallis iaculis et sodales non justo.', 
           date:'Jan 01, 2020', 
           author:"Robert O'Malley", 
         },
         {
-          imgUrl:'blog/image-03.jpg', 
+          image:'blog/image-03.jpg', 
           category: 'news',
           title:'Orem ipsum dolor sit amet consectetur adipiscing', 
           date:'Jan 13, 2020', 
           author:"Robert O'Malley", 
         },
          {
-          imgUrl:'blog/image-04.jpg', 
+          image:'blog/image-04.jpg', 
           category: 'events',
           title:'Sed eurs-us. bibendum feugíat. In orcí sapien', 
           date:'Jan 11, 2020', 
