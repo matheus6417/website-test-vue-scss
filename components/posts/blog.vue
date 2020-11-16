@@ -80,7 +80,9 @@ export default {
 <style scoped lang="scss">
 @import "../../assets/css/base/fonts";
 @import "../../assets/css/utilities/variables";
-
+::-webkit-scrollbar {
+  display: none;
+}
 .post {
   margin-bottom: 4rem;
   display: flex;

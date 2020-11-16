@@ -1,7 +1,7 @@
 <template>
   <div class="component-accordion">
     <div class="accordion-item" v-for="(faq, i) in faqs" :key="i">
-      <div class="accordion-item-header" @click="itemOpened = i">
+      <div class="accordion-item-header" @click="itemOpened === i ?  itemOpened = null : itemOpened = i">
         <description :size="'sm'" :isBold="true" :text="faq.question" />
         <icon
           :icon-style="'icon'"
@@ -73,6 +73,7 @@ export default {
 .accordion-item-content {
   display: flex;
   overflow: hidden;
+  padding: 0 2rem 0 0;
   opacity: 0;
   transition: all 0.1s;
   height: 0;
